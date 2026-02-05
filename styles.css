@@ -2,6 +2,13 @@
   margin: 0;
 }
 
+html {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
 body {
   /* background-image: url(images/background.png); */
   background-color: rgb(231, 231, 231);
@@ -9,13 +16,20 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   height: 50px;
   width: 100vw;
 
+  padding-left: 5px;
   display: flex;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 nav a {
@@ -27,15 +41,40 @@ nav a {
 header {
   font-size: 20px;
   text-align: center;
-  margin: 30px 0;
+  margin: 80px 0 30px;
 }
 
 main {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   max-width: 80%;
   height: 100vh;
   margin: 0 auto;
+
+  padding: 20px;
+}
+
+dl {
+  padding-bottom: 5px;
+}
+
+dt {
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+dt::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+}
+
+dd {
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 550px) {
