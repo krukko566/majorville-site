@@ -1,116 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U07 RWD LAB | CSS Grid Holy Grail Layout</title>
-    <style>
-        /* TODO: Define the mobile-first grid container */
-        /* Use grid-template-areas for a single column: header, nav, content, side, footer */
-        .container {
-            display: grid;
-            height: 100vh;
-            grid-template-columns: 1fr;
-            grid-template-rows: 100px 1fr 300px 175px 175px 100px;
-            grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "lside"
-            "rside"
-            "footer";
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        /* TODO: Assign grid-areas to the elements below (header, nav, main, aside, footer) */
-        header { background-color: rgb(6, 191, 191); grid-area: header;} 
-        nav { background-color: rgba(8, 139, 89, 0.849); grid-area: nav;}
-        main { background-color: darkseagreen; grid-area: main;}
-        .lside { background-color: rgb(61, 178, 32); grid-area: lside;}
-        .rside { background-color: lightseagreen; grid-area: rside;}
-        footer { background-color: slategray; grid-area: footer;}
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;        
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="events.css" />
 
-        nav ul li {
-            cursor: pointer;
-            padding: 0.5rem;
-            flex: auto;
-            text-align: center;}
-        nav ul li:hover {
-            background-color: #555;
-            color: white;}
+    <title>Majorville: Events</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/events/index.html">Events</a>
+      <a href="/history/index.html">History</a>
+    </nav>
+    <header><h1>EVENTS</h1></header>
+    <main>
+      <p style="margin-bottom: 10px">Events to check out while at the Festivle!</p>
 
-        nav ul li {
-        text-align: center;}
+      <h2>Major Events:</h2>
 
-    
-
-        /* TODO: Create a MEDIA QUERY for screens WIDER than 550px */
-        /* Change the grid-template-areas to the 3-column "Holy Grail" layout */
-        @media (min-width: 550px) {
-            .container {
-                height: 100vh; /* Container takes up 100% of the height of the viewport */
-                grid-template-columns: 1fr 4fr 1fr;
-                grid-template-rows: 100px auto 1fr 50px;
-                /* HINT: "header header header" ... */
-                grid-template-areas: 
-                "header header header"
-                "nav nav nav"
-                "lside main rside"
-                "footer footer footer";
-            }
-
-            nav ul { flex-direction: row;}
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>Events to check out while at the Festivle!</header>
-        <!-- CSS FLEXBOX NAVIGATION -->
-        <!-- TODO: Add a semantic nav element below this comment that contains 4 - 6 HTML anchor tags (hyperlinks), then use Flexbox to build your responsive navbar -->
-         <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
-            </ul>
-         </nav>
-     
-
-        <main>Major Events
-            <ol>
-                <li>Lumberjack Competition: test your woodsman skills in a Lumberjack Competiton registration starts at 10:00am and will end at lunch.</li>
-                <li>Exhibition Baseball Game: The local Majorville Lumberjack baseball team is hosting an Exhibition Game.</li>
-                <li>Blacksmithing Demonstration: The kind Dan Nickles is volunteering to do a blacksmithing demonstartion to provide people with an insight to an important historic craft.</li>
-            </ol>
-        </main>
-        <div class="lside">Images
-            <p class="attribution">"<a rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=75606402">Lumberjack competition</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/people/132646954@N02">dronepicr</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="Lumberjack Competition.jpg" style="height: 8rem; margin-right: 0.125em; display: inline;" /></a>.</p>
-
-            <p class="attribution">"<a rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=39820939">Baseball Stadium</a>" by <a rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/User:Choi2451">Choi2451</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/3.0/?ref=openverse">CC BY-SA 3.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="Baseball Stadium.jpg" style="height: 8rem; margin-right: 0.125em; display: inline;" /></a>.</p>
-
-            <p class="attribution">"<a rel="noopener noreferrer" href="https://www.geograph.org.uk/photo/4260506">Blacksmith Demonstration</a>" by <a rel="noopener noreferrer" href="https://geograph.org.uk/profile/4264">Chris Allen</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse">CC BY-SA 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="Blacksmith demonstration.jpg" style="height: 9rem; margin-right: 0.125em; display: inline;" /></a>.</p>
-
+      <div class="container">
+        <div class="card">
+          <img src="/images/jumberjack-competition.jpg" alt="Lumberjack competition" />
+          <h3>Lumberjack Competition</h3>
+          <p>
+            test your woodsman skills in a Lumberjack Competiton registration starts at 10:00am and
+            will end at lunch.
+          </p>
         </div>
-        <div class="rside">Minor Events
-            <ol>
-                <li>Live Music by Brearge Owl Breathe</li>
-                <li>Outdoor Yoga</li>
-                <li>Sack Races</li>
-                <li>Flower Crowns/Pressing</li>
-                <li>Strawberry Picking</li>
-                <li>Farm Animal Petting Zoo</li>
-            </ol>
+
+        <div class="card">
+          <img src="/images/baseball-stadium.jpg" alt="Baseball game" />
+          <h3>Exhibition Baseball Game</h3>
+          <p>The local Majorville Lumberjack baseball team is hosting an Exhibition Game.</p>
         </div>
-        <footer>Those were some events to check out while at the Festivle.</footer>
-    </div>
-</body>
+
+        <div class="card">
+          <img src="/images/blacksmith-demo.jpg" alt="Blacksmithing demonstration" />
+          <h3>Blacksmithing Demonstration</h3>
+          <p>
+            The kind Dan Nickles is volunteering to do a blacksmithing demonstartion to provide
+            people with an insight to an important historic craft.
+          </p>
+        </div>
+      </div>
+
+      <h2>Minor Events:</h2>
+      <dl>
+        <dt>Live Music by Brearge Owl Breathe</dt>
+        <dt>Outdoor Yoga</dt>
+        <dt>Sack Races</dt>
+        <dt>Flower Crowns/Pressing</dt>
+        <dt>Strawberry Picking</dt>
+        <dt>Farm Animal Petting Zoo</dt>
+      </dl>
+    </main>
+  </body>
 </html>
