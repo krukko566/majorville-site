@@ -42,8 +42,8 @@ footer {
     grid-template-areas: 
         "h h h h h"
         "n n n n n"
-        "ls m m m rs"
-        "ls m m m rs"
+        "m m m m rs"
+        "m m m m rs"
         "f f f f f";
 }
 a:hover {
