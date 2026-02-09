@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body {
+    color: steelblue;
+    margin: 5vh 17vw 10vh;
+    background: scroll 100%;
+    background-image: url(images/new-plaid-bg.png);
+}
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+.l-sidebar {
+    grid-area: ls;
+}
+main {
+    grid-area: m;
+}
+.r-sidebar {
+    grid-area: rs;
+}
+footer {
+    grid-area: f;
+}
+.container > * {
+    margin: 3px;
+    border: double rgba(0, 255, 255, 0.6) 5px;
+    text-align: center;
+    background: rgba(135, 206, 235, 0.25);
+}
+.container {
+    backdrop-filter: blur(3px);
+    align-content: stretch;
+    justify-content: stretch;
+    display: grid;
+    grid-template-areas: 
+        "h h h h h"
+        "n n n n n"
+        "ls m m m rs"
+        "ls m m m rs"
+        "f f f f f";
+}
+a:hover {
+    color: steelblue;
+}
+a:active {
+    color: transparent;
+}
