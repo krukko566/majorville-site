@@ -4,51 +4,109 @@
     padding: 0;
     box-sizing: content-box;
 }
+
+html {
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+}
+
 body {
-    color: steelblue;
-    margin: 5vh 17vw 10vh;
-    background: scroll 100%;
+    background: 100%;
     background-image: url(images/UPDATED-plaid.png);
 }
-header {
-    grid-area: h;
-}
+
 nav {
-    grid-area: n;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    height: 50px;
+    width: 100vw;
+
+    padding-left: 5px;
+    display: flex;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
-.l-sidebar {
-    grid-area: ls;
+
+nav a {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px;
 }
+
+header {
+    font-size: 20px;
+    text-align: center;
+    margin: 80px 0 30px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 main {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
     grid-area: m;
 }
-.r-sidebar {
+
+aside {
     grid-area: rs;
 }
+
 footer {
-    grid-area: f;
+    font-size: 18px;
+    margin: 80px 0 30px 15vw;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 .container > * {
-    margin: 3px;
-    border: double rgba(0, 255, 255, 0.6) 5px;
+    margin: 5px;
     text-align: center;
-    background: rgba(135, 206, 235, 0.25);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
+    border-radius: 15px;
 }
+
 .container {
-    align-content: stretch;
-    justify-content: stretch;
+    margin: 0 17vw 10vh;
     display: grid;
     grid-template-areas: 
         "h h h h h"
-        "n n n n n"
         "m m m m rs"
         "m m m m rs"
         "f f f f f";
 }
-a:hover {
-    color: steelblue;
-}
+
 a:active {
     color: transparent;
+}
+@media (max-width: 550px) {
+    main {
+        max-width: 100%;
+    }
+}
+
+dl {
+    padding-bottom: 5px;
+}
+
+dt {
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+dd {
+    padding-left: 100px;
 }
