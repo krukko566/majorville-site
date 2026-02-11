@@ -45,7 +45,7 @@ header {
   text-align: center;
   margin: 80px 0 30px;
   color: white;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 main {
@@ -94,7 +94,7 @@ section .images img {
 }
 
 hr {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 dl {
@@ -104,20 +104,19 @@ dl {
 dt {
   font-weight: bold;
   font-size: 25px;
-  padding: 10px;
-  padding-left: 25px;
+  padding: 10px 10px 10px 0;
   position: relative;
 }
 
-dt::before {
-  content: "•";
-  position: absolute;
-  left: 5px;
+dd {
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
-dd {
-  padding-left: 30px;
-  padding-bottom: 10px;
+@media (min-width: 880px) {
+  main {
+    padding: 40px;
+  }
 }
 
 @media (max-width: 880px) {
