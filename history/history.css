@@ -12,9 +12,8 @@ html {
     font-variation-settings: "GRAD" 0;
 }
 
-body {
-    background: 100%;
-    background-image: url(images/UPDATED-plaid.png);
+nav a {
+    color: auto;
 }
 
 nav {
@@ -27,6 +26,7 @@ nav {
 
     padding-left: 5px;
     display: flex;
+    flex-direction: row;
 
     position: fixed;
     z-index: 1;
@@ -41,6 +41,7 @@ nav a {
 }
 
 header {
+    background-image: url(/images/);
     font-size: 20px;
     text-align: center;
     margin: 80px 0 30px;
@@ -49,42 +50,36 @@ header {
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
     grid-area: m;
 }
-
-aside {
-    grid-area: rs;
+h2 {
+    text-align: center;
 }
-
-footer {
-    font-size: 18px;
-    margin: 80px 0 30px 15vw;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+aside {
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    grid-area: rs;
 }
 
 .container > * {
     margin: 5px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
     border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container {
     margin: 0 17vw 10vh;
     display: grid;
-    grid-template-areas: 
-        "h h h h h"
+    grid-template-areas:
         "m m m m rs"
-        "m m m m rs"
-        "f f f f f";
+        "m m m m rs";
 }
 
 a:active {
