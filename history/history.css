@@ -5,6 +5,20 @@
     box-sizing: content-box;
 }
 
+body {
+    background-size: 3.315%;
+    background-image: url(/images/new-plaid-bg.png);
+    background-repeat: repeat;
+}
+pre {
+    font-size: 18px;
+    text-wrap: wrap;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+}
+
 html {
     font-family: "Google Sans", sans-serif;
     font-optical-sizing: auto;
@@ -41,10 +55,14 @@ nav a {
 }
 
 header {
-    background-image: url(/images/);
-    font-size: 20px;
+    border-radius: 4%/15px;
+    background-image: url(/images/site-background.png);
+    background-size: cover;
+    background-position: center;
+    font-size: 26px;
     text-align: center;
-    margin: 80px 0 30px;
+    margin: 80px 30vw 15px;
+    padding: 70px 0;
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -56,6 +74,7 @@ main {
     grid-area: m;
 }
 h2 {
+    font-size: 28px;
     text-align: center;
 }
 aside {
