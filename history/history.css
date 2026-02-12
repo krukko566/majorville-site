@@ -5,13 +5,7 @@
     box-sizing: content-box;
 }
 
-body {
-    background-size: 3.315%;
-    background-image: url(/images/new-plaid-bg.png);
-    background-repeat: repeat;
-}
 pre {
-    font-size: 18px;
     text-wrap: wrap;
     font-family: "Google Sans", sans-serif;
     font-optical-sizing: auto;
@@ -55,14 +49,7 @@ nav a {
 }
 
 header {
-    border-radius: 4%/15px;
-    background-image: url(/images/site-background.png);
-    background-size: cover;
-    background-position: center;
-    font-size: 26px;
     text-align: center;
-    margin: 80px 30vw 15px;
-    padding: 70px 0;
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -73,10 +60,7 @@ main {
     padding: 20px;
     grid-area: m;
 }
-h2 {
-    font-size: 28px;
-    text-align: center;
-}
+
 aside {
     min-height: 100vh;
     margin: 0 auto;
@@ -86,19 +70,13 @@ aside {
 
 .container > * {
     margin: 5px;
-    backdrop-filter: blur(3px);
-    border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container {
-    margin: 0 17vw 10vh;
-    display: grid;
-    grid-template-areas:
-        "m m m m rs"
-        "m m m m rs";
+    margin: 0 20vw 10vh;
 }
 
 a:active {
