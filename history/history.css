@@ -5,7 +5,13 @@
     box-sizing: content-box;
 }
 
+body {
+    background-size: 3.315%;
+    background-image: url(/images/new-plaid-bg.png);
+    background-repeat: repeat;
+}
 pre {
+    font-size: 18px;
     text-wrap: wrap;
     font-family: "Google Sans", sans-serif;
     font-optical-sizing: auto;
@@ -60,23 +66,28 @@ main {
     padding: 20px;
     grid-area: m;
 }
-
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
 aside {
     min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
     grid-area: rs;
 }
-
 .container > * {
     margin: 5px;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-
 .container {
-    margin: 0 20vw 10vh;
+    margin: 0 17vw 10vh;
+    display: grid;
+    grid-template-areas:
+        "m m m m rs"
+        "m m m m rs";
 }
 
 a:active {
