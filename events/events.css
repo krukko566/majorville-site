@@ -35,4 +35,12 @@
 dt {
   font-weight: normal;
   font-size: 20px;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+dt::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
 }
