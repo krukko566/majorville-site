@@ -5,18 +5,13 @@
     box-sizing: content-box;
 }
 
-body {
-    background-size: 3.315%;
-    background-image: url(/images/new-plaid-bg.png);
-    background-repeat: repeat;
-}
 pre {
-    font-size: 18px;
     text-wrap: wrap;
     font-family: "Google Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings: "GRAD" 0;
+    padding: 0 10px 10px;
 }
 
 html {
@@ -24,6 +19,10 @@ html {
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings: "GRAD" 0;
+}
+
+body {
+    font-size: 115%;
 }
 
 nav a {
@@ -62,40 +61,89 @@ header {
 
 main {
     min-height: 100vh;
+    min-width: stretch;
     margin: 0 auto;
     padding: 20px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
     grid-area: m;
 }
-h2 {
-    font-size: 28px;
-    text-align: center;
-}
+
 aside {
     min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
-    grid-area: rs;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+    grid-area: s;
 }
+
 .container > * {
-    margin: 5px;
+    margin: 5px 0;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 .container {
-    margin: 0 17vw 10vh;
+    margin: 0 10% 10%;
     display: grid;
-    grid-template-areas:
-        "m m m m rs"
-        "m m m m rs";
+    grid-template-areas: 
+        "m m m m s";
 }
 
 a:active {
     color: transparent;
 }
-@media (max-width: 550px) {
+
+@media (min-width: 881px) {
+    main {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 881px) {
+    section .images {
+        grid-template-columns: 1fr;
+    }
+    .map {
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 801px) {
     main {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 581px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    section .images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 551px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    section .images img {
+        width: 100%;
+    }
+    .container {
+        margin: auto 0 auto;
+    }
+    .container > * {
+        margin: auto 2% 4%;
+    }
+}
+
+@media (max-width: 451px) {
+    dt {
+        font-size: 20px;
     }
 }
 
