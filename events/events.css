@@ -9,7 +9,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   display: flex;
-  height: 250px;
+  /* height: 250px; */
   text-align: right;
 
   margin-bottom: 10px;
@@ -29,7 +29,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   display: flex;
-  height: 250px;
+  /* height: 250px; */
   text-align: left;
 
   margin-bottom: 10px;
@@ -62,7 +62,22 @@ dt::before {
   .right {
     flex-direction: column;
   }
+  .right img {
+    width: 100%;
+  }
   .left {
     flex-direction: column;
+  }
+  .left img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 720px) {
+  .right {
+    height: 250px;
+  }
+  .left {
+    height: 250px;
   }
 }
