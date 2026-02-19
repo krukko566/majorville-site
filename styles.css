@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-size: 18px; */
 }
 
 html {
@@ -64,6 +65,10 @@ main {
   margin: 0 auto;
 
   padding: 20px;
+}
+
+p {
+  font-size: 18px;
 }
 
 footer {
